@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<title>Hudson Barnes Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="public/style.css">
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">PROJECTS</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">CONTACT</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Hudson Barnes</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT ME</span></h5>
+    <img src="assets/3.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p>I have worked in customer service for almost three years and have learned many skills in the process. Skills I have acquired include engaging customer service, multitasking, dealing with tough situations, and many others that will come in handy in future jobs and careers. Attending and graduating from a University Preparatory school has taught me how to continue learning and use what I have learned in everything I do. </p>
+    <p>In addition to that, I have started work in web development with UC Berkeley Extention's Bootcamps to learn new skills and start a career in web development. </p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"No matter what anybody tells you, words and ideas can change the world."</i></p>
+      <p>Robin Williams, Dead Poets Society</p>
+    </div>
+  </div>
+</div>
+
+<!-- Project Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">PROJECTS</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Circle');" id="myLink">
+        <div class="w3-col s6 tablink">Circle Restaurant Management</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Dinner');">
+        <div class="w3-col s6 tablink">What's For Dinner?</div>
+      </a>
+    </div>
+
+    <div id="Circle" class="w3-container menu w3-padding-48 w3-card">
+      <h5>For this project, I worked mainly on the API and HTML routes with help with backend functionality.</h5>
+      <p class="w3-text-grey"><a href="https://github.com/hudsonmbarnes/circle_restaurant_mgmt">GitHub Page</a></p>
+      <p class="w3-text-grey"><a href="https://circle-restaurant-mgmt-02.herokuapp.com/">See Site</a></p>
+      <img src="assets/main.gif" style="width:100%;max-width:1000px;margin-top:32px;">
+    
+    
+      
+    </div>
+
+    <div id="Dinner" class="w3-container menu w3-padding-48 w3-card">
+      <h5>For This project, </h5>
+      <p class="w3-text-grey"><a href="https://github.com/vubao2303/Project-1">GitHub Page</a></p>
+      <p class="w3-text-grey"><a href="https://vubao2303.github.io/Project-1/">See Site</a></p>
+      <img src="assets/header.png" style="width:100%;max-width:1000px;margin-top:32px;">
+    </div>  
+    
+  </div>
+</div>
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND ME</span></h5>
+    <p>Links:</p>
+    
+    <p><span class="w3-tag"><a href="https://github.com/hudsonmbarnes">GitHub</a></span> Here you can see all my projects and repositories worked on throught the span of my bootcamp</p>
+    <p><span class="w3-tag"><a href="https://www.linkedin.com/in/hudson-barnes-398483151/">LinkedIn</a></span> Here is my LinkedIn profile for more information and seeing what I have been up to lately</p>
+    <p><span class="w3-tag"><a href="https://docs.google.com/document/d/1HiIA32npfnKoDb-sz8aFYKmktbC9PTNg8ayRZZgSfjc/edit?usp=sharing">Resume</a></span> Here is my resume. You can see my work experience and other important information</p>
+
+
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
