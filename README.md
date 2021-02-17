@@ -33,7 +33,7 @@ View on Visual Studio Code
 
 ## Deployed Link
 
-* [See Live Site]()https://hudsonmbarnes.github.io/portfolio3/
+* [See Live Site](https://hudsonmbarnes.github.io/portfolio3/)
 
 ## What I did
 
