@@ -1,4 +1,4 @@
-# portfolio3# Weather Dashboard
+# Hudson Barnes's Portfolio
 ## Website Description
 
 This is my updated portfolio website with active links to my resume, GitHub, and LinkedIn
@@ -37,46 +37,27 @@ View on Visual Studio Code
 
 ## What I did
 
-![portfolio demo](demo.png)
+![portfolio demo](assets/demo.png)
 
 ## Code Snippet
 
-This part of the code is the homepage to my portfolio.
+This part of the code is the the function to open the menu items
 
 ```
-<div class="container">
-        <div class="wrapper">
-            <div class="content">
-                <!-- Navbar -->
-                    <header>
-                        <div class="topnav">
-                            <a class="active" href="index.html">Hudson Barnes</a>
-                            <a href="skills.html">Skills</a>
-                            <a href="contact.html">Contact</a>
-                          </div>
-                    </header>
-                    <!-- About me -->
-                    <section class="about" id="about">
-                        <h1 class="about-body">Hello,</h1>
-                        <h1 class="about-body">I am Hudson Barnes</h1>
-                        <p class="about-body">I am from Redding CA where I graduated from University Preparatory High School in 2018 and have been working as a barista at Dutch Bros. Coffee since. I am currently working to become a web developer at UC Berkeley Extension.</p>
-                    </section>
-                    <!-- Contact Me card -->
-                    <section class="contact" id="contact">
-                        <h2>Contact Me</h2>
-                            <div class="card">
-                                <img src="resume2.png" alt="resumepic" style="width:100%">
-                                <div class="contact-info">
-                                    <h4><b>Hudson Barnes</b></h4> 
-                                    <p><a href="https://docs.google.com/document/d/1HiIA32npfnKoDb-sz8aFYKmktbC9PTNg8ayRZZgSfjc/edit#">My Resume</a></p>
-                                </div>
-                            </div>
-                    </section>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
 ```
 
 ## Editors
